@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Grid CSS</title>
+
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .grid-container {
+      display: grid;
+      /* 1140/4 = 285px; gap=32px ou 2rem */
+      grid-template-columns: repeat(auto-fit, minmax(calc(285px - 1rem), 1fr));
+      grid-template-rows: fit-content(200px) 1fr;
+      padding: 1rem;
+      gap: 1.5rem;
+      background-color: #f2f2f2;
+      font-family: 'Helvetica', sans-serif;
+      max-width: calc(1140px + 2rem);
+      margin: auto;
+      min-height: 60vh;
+      align-items: flex-start;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .grid-container>.link-card {
+      background-color: #ffffff;
+      color: #cc0000;
+      text-align: center;
+      padding: .75rem;
+      border-radius: .5rem .5rem 0 0;
+      font-size: 1rem;
+      height: 130px;
+      border: 1px solid #ddd;
+      border-bottom: 4px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: rgba(14, 63, 126, 0.03) 0px 0px 0px 1px, rgba(42, 51, 69, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.03) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 6px 6px -3px, rgba(14, 63, 126, 0.03) 0px 12px 12px -6px, rgba(14, 63, 126, 0.03) 0px 24px 24px -12px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .grid-container>.link-card figure {
+      margin: 0;
+    }
+
+    .grid-container>.link-card svg {
+      max-width: 42px;
+    }
+
+    .grid-container>.link-card:hover {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+      outline: none;
+      transition: all 0.2s ease;
+      border-bottom-color: #cc0000;
+    }
+
+    .grid-container>.link-card:hover h2,
+    .grid-container>.link-card:hover svg {
+      filter: brightness(0.7);
+      transition: all 0.2s ease;
+    }
+
+    .grid-container>.link-card h2 {
+      color: #cc0000;
+      margin: 0;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="grid-container">
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1499_2450)">
+          <path d="M20 41H47" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M11.75 14.6487L20 17V9.49999C20 9.2623 20.0565 9.02801 20.1648 8.81642C20.2731 8.60484 20.4301 8.42202 20.6229 8.28304C20.8157 8.14405 21.0388 8.05288 21.2738 8.01703C21.5088 7.98119 21.7489 8.00169 21.9744 8.07686L23 8.41999L27.5 19.145L39.605 22.52C40.8702 22.8712 41.9852 23.6278 42.7791 24.6737C43.573 25.7195 44.0019 26.9969 44 28.31V35L10.8819 25.7262C9.62129 25.3732 8.51075 24.6176 7.71962 23.5746C6.92849 22.5316 6.50018 21.2585 6.5 19.9494V9.49999C6.49998 9.2623 6.55645 9.02801 6.66475 8.81642C6.77305 8.60484 6.93008 8.42202 7.1229 8.28304C7.31572 8.14405 7.53881 8.05288 7.77379 8.01703C8.00876 7.98119 8.24888 8.00169 8.47437 8.07686L9.5 8.41999L11.75 14.6487Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1499_2450">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Leads</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5044)">
+          <path
+            d="M6.59377 26.375C5.06575 23.5203 4.61462 20.2116 5.32264 17.0521C6.03066 13.8925 7.85066 11.0927 10.4508 9.16316C13.0509 7.23359 16.2579 6.30279 19.4871 6.54051C22.7162 6.77822 25.7523 8.16861 28.0419 10.4581C30.3314 12.7477 31.7218 15.7838 31.9595 19.013C32.1972 22.2421 31.2664 25.4491 29.3369 28.0492C27.4073 30.6493 24.6075 32.4694 21.4479 33.1774C18.2884 33.8854 14.9797 33.4343 12.125 31.9062L6.92002 33.4362C6.66157 33.5121 6.38744 33.517 6.12644 33.4504C5.86543 33.3838 5.62718 33.2481 5.43671 33.0577C5.24624 32.8672 5.11057 32.629 5.04396 32.3679C4.97735 32.1069 4.98225 31.8328 5.05815 31.5744L6.59377 26.375Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M31.2387 15.5206C33.5066 15.6439 35.7067 16.3374 37.6353 17.5368C39.564 18.7363 41.1589 20.4029 42.2723 22.3825C43.3857 24.362 43.9817 26.5905 44.0052 28.8616C44.0286 31.1326 43.4786 33.3729 42.4062 35.375L43.9362 40.58C44.0121 40.8385 44.017 41.1126 43.9504 41.3736C43.8838 41.6346 43.7481 41.8728 43.5577 42.0633C43.3672 42.2538 43.1289 42.3895 42.8679 42.4561C42.6069 42.5227 42.3328 42.5178 42.0744 42.4419L36.875 40.9063C35.1575 41.8248 33.2616 42.3611 31.3174 42.4783C29.3732 42.5956 27.4267 42.2911 25.6112 41.5857C23.7957 40.8802 22.1543 39.7906 20.7993 38.3914C19.4444 36.9922 18.408 35.3166 17.7612 33.4794"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5044">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Leads Messenger</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5054)">
+          <path d="M38 32L24.5 18.5L18.5 24.5L6.5 12.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M38 24.5V32H30.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M42.5 39.5H6.5V9.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5054">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Analytics</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5070)">
+          <path
+            d="M6.5 18.5V38C6.5 38.3978 6.65804 38.7794 6.93934 39.0607C7.22064 39.342 7.60218 39.5 8 39.5H41C41.3978 39.5 41.7794 39.342 42.0607 39.0607C42.342 38.7794 42.5 38.3978 42.5 38V18.5L24.5 6.5L6.5 18.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M42.5 18.5L27.7738 29H21.2281L6.5 18.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5070">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Marketing 1:1</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5113)">
+          <path d="M18.5 42.5H30.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M24.5 35V42.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M11.375 24.5H9.5C7.9087 24.5 6.38258 23.8679 5.25736 22.7426C4.13214 21.6174 3.5 20.0913 3.5 18.5V15.5C3.5 15.1022 3.65804 14.7206 3.93934 14.4393C4.22064 14.158 4.60218 14 5 14H11"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M37.625 24.5H39.5C41.0913 24.5 42.6174 23.8679 43.7426 22.7426C44.8679 21.6174 45.5 20.0913 45.5 18.5V15.5C45.5 15.1022 45.342 14.7206 45.0607 14.4393C44.7794 14.158 44.3978 14 44 14H38"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M11 9.5H38V21.3312C38 28.775 32.0469 34.9437 24.6031 35C22.8216 35.0136 21.055 34.6745 19.4052 34.0021C17.7554 33.3298 16.255 32.3375 14.9904 31.0826C13.7259 29.8276 12.7223 28.3348 12.0374 26.6902C11.3525 25.0455 10.9999 23.2816 11 21.5V9.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5113">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Assessment</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5128)">
+          <path d="M34.25 8H41V14.75" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M34.25 41H41V34.25" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M14.75 41H8V34.25" stroke="#CC0000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M14.75 8H8V14.75" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M24.5 27.5C27.8137 27.5 30.5 24.8137 30.5 21.5C30.5 18.1863 27.8137 15.5 24.5 15.5C21.1863 15.5 18.5 18.1863 18.5 21.5C18.5 24.8137 21.1863 27.5 24.5 27.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M15.5 32C16.5479 30.6028 17.9067 29.4688 19.4688 28.6877C21.031 27.9066 22.7535 27.5 24.5 27.5C26.2465 27.5 27.969 27.9066 29.5312 28.6877C31.0933 29.4688 32.4521 30.6028 33.5 32"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5128">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Usuários</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5142)">
+          <path
+            d="M8 33.5V14C8 13.2044 8.31607 12.4413 8.87868 11.8787C9.44129 11.3161 10.2044 11 11 11H38C38.7956 11 39.5587 11.3161 40.1213 11.8787C40.6839 12.4413 41 13.2044 41 14V33.5"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M5 33.5H44V36.5C44 37.2956 43.6839 38.0587 43.1213 38.6213C42.5587 39.1839 41.7956 39.5 41 39.5H8C7.20435 39.5 6.44129 39.1839 5.87868 38.6213C5.31607 38.0587 5 37.2956 5 36.5V33.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M27.5 17H21.5" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5142">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Treinamento</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+        <g clip-path="url(#clip0_1504_5155)">
+          <path d="M20 17H29" stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M43.5481 29.435L35.3638 10.8125C34.5198 9.96863 33.3753 9.49457 32.1819 9.49457C30.9885 9.49457 29.8439 9.96863 29 10.8125V32"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M20 32V10.8125C19.1561 9.96863 18.0116 9.49457 16.8182 9.49457C15.6247 9.49457 14.4802 9.96863 13.6363 10.8125L5.4519 29.435"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M12.5 39.5C16.6421 39.5 20 36.1421 20 32C20 27.8579 16.6421 24.5 12.5 24.5C8.35786 24.5 5 27.8579 5 32C5 36.1421 8.35786 39.5 12.5 39.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M36.5 39.5C40.6421 39.5 44 36.1421 44 32C44 27.8579 40.6421 24.5 36.5 24.5C32.3579 24.5 29 27.8579 29 32C29 36.1421 32.3579 39.5 36.5 39.5Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1504_5155">
+            <rect width="48" height="48" fill="white" transform="translate(0.5 0.5)" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Pesquisa SSI/TSI</h2>
+    </a>
+
+    <!-- ITEM CARD -->
+    <a href="#" class="link-card">
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <g clip-path="url(#clip0_1589_2060)">
+          <path
+            d="M6 39V12C6 11.6022 6.15804 11.2206 6.43934 10.9393C6.72064 10.658 7.10218 10.5 7.5 10.5H17.4994C17.8239 10.5 18.1397 10.6053 18.3994 10.8L24 15H37.5C37.8978 15 38.2794 15.158 38.5607 15.4393C38.842 15.7206 39 16.1022 39 16.5V21"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M6 39L11.6587 22.0256C11.7583 21.7269 11.9493 21.4672 12.2048 21.2831C12.4602 21.099 12.767 21 13.0819 21H43.5C43.7377 21 43.972 21.0565 44.1836 21.1648C44.3951 21.2731 44.578 21.4301 44.717 21.6229C44.8559 21.8157 44.9471 22.0388 44.983 22.2738C45.0188 22.5088 44.9983 22.7489 44.9231 22.9744L39.5794 39H6Z"
+            stroke="#CC0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </g>
+        <defs>
+          <clipPath id="clip0_1589_2060">
+            <rect width="48" height="48" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <h2>Genérico</h2>
+    </a>
+
+  </div>
+
+
+</body>
+
+</html>
